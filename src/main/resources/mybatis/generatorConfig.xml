@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="c:/work/repositories/mysql/mysql-connector-java/5.1.43/mysql-connector-java-5.1.43.jar"/>
+
+    <context id="AllInfo" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://10.138.8.233:3306/searchengine_test?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
+                        userId="se_test"
+                        password="se_test">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.aas.project.entity" targetProject="c:/work/project/mvc_framework/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mybatis.mappers" targetProject="c:/work/project/mvc_framework/src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.aas.project.dao" targetProject="c:/work/project/mvc_framework/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--业务类例子 -->
+        <!--<table tableName="bp_cards">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>
+        </table>
+        <table tableName="bp_change_std">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>
+        </table>
+        <table tableName="bp_custs">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>
+        </table>
+        <table tableName="bp_points_dtl">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+        </table>
+        <table tableName="bp_user3rd">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>
+        </table>
+        <table tableName="gm_goods_info">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>
+        </table>
+        <table tableName="gm_goods_dtl">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />&lt;!&ndash;
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>&ndash;&gt;
+        </table>
+        <table tableName="ptsequence">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            &lt;!&ndash;<property name="useActualColumnNames" value="true" />&ndash;&gt;
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>
+        </table>-->
+        <!--<table tableName="bp_user3rd_checknum">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            &lt;!&ndash;<property name="useActualColumnNames" value="true" />&ndash;&gt;
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>
+        </table>
+        <table tableName="bp_custs">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>
+        </table>-->
+        <!--<table tableName="gm_goods_dtl">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+        </table>-->
+        <!--<table tableName="takeout_food">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+            &lt;!&ndash;<generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>&ndash;&gt;
+        </table>-->
+
+        <table tableName="dataassets_count_number" domainObjectName="DataassetsCountNumberDomain"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false" enableInsert="false"
+               enableUpdateByPrimaryKey="false" enableSelectByPrimaryKey="true"
+               enableDeleteByPrimaryKey="false">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+            <!--<generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>-->
+        </table>
+        <!--<table tableName="tm_member">
+            <property name="ignoreQualifiersAtRuntime" value="true" />
+            <property name="useActualColumnNames" value="true" />
+            <generatedKey column="pkid" sqlStatement="select uuid()" identity="false"/>
+        </table>-->
+    </context>
+</generatorConfiguration>
